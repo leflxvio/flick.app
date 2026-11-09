@@ -1,0 +1,19 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "cdn",
+  "projectType": "application",
+  "sourceRoot": "apps/cdn/public",
+  "tags": [
+    "type:app",
+    "scope:cdn"
+  ],
+  "targets": {
+    "docker": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker build -f apps/cdn/Dockerfile -t flick-cdn .",
+        "cwd": "{workspaceRoot}"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "flick",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "engines": {
+    "node": "^24.15.0 || >=26.0.0",
+    "npm": ">=11"
+  },
+  "scripts": {
+    "dev": "nx run-many -t dev --parallel=3",
+    "dev:frontend": "nx run frontend:dev",
+    "dev:backend": "nx run backend:dev",
+    "dev:cdn": "nx run cdn:dev",
+    "build": "nx run-many -t build",
+    "test": "nx run-many -t test",
+    "docker:up": "docker compose up --build -d --wait",
+    "docker:down": "docker compose down",
+    "typecheck": "nx run-many -t typecheck",
+    "graph": "nx graph",
+    "docker:build": "nx run-many -t docker"
+  },
+  "devDependencies": {
+    "nx": "24.0.5",
+    "typescript": "~6.0.0"
+  }
+}

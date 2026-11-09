@@ -1,0 +1,7 @@
+{
+  "name": "@flick/cdn",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": { "dev": "http-server public -a 127.0.0.1 -p 4200 -c-1 --cors" },
+  "devDependencies": { "http-server": "^14.1.1" }
+}
